@@ -1,0 +1,17 @@
+* {
+    background-color: beige;
+}
+caption {
+    font-size: 1000;
+    color: green;
+    font-size: xx-large;
+}
+.red {
+    color:red;
+}
+.blue {
+    color: blue;
+}
+tr {
+    text-align: center;
+}
