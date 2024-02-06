@@ -8,9 +8,6 @@ li {
 /* class 선택자*/
 /* html 내에서 해당 class를 가진 요소*/
 /* .클래스명 {속성: 속성값;} */
-.orange {
-    color: orange;
-}
 .red {
     background-color: red;
 }
@@ -24,4 +21,4 @@ li {
 .red { 
     background-color: blue;
 }
-/**/
+

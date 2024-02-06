@@ -3,9 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>실습6</title>
+    <title>가상 요소 선택자 실슴</title>
+    <style>
+        .box: ::before {
+            content: "택시";
+
+        }
+        .box: ::after {
+            content; "빨리";
+        }    
+    </style>
 </head>
 <body>
-    <div class="box">여기요!</div>
+    <div class="box">
+        "여기요!"
+    </div>
 </body>
 </html>
