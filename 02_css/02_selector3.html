@@ -93,9 +93,24 @@
         .div2::after {
             content: "";
         }
+        .content article {
+            height: 500px;
+            border: 5px solid blue;
+        }
+        
         </style>
     </head>
     <body>
+       <section>
+        <a href="#detail">상세정보</a>
+        <a href="#review">후기</a>
+        <a href="#comunity">커뮤니티</a>
+       </section>
+       <section class="content">
+        <article class="detail">여기는 상세정보 내용</article>
+        <article id="review">여기는 후기 내용</article>
+        <article id="comunity">여기는 커뮤니티 내용</article>
+       </section>
         <div class="div1">
             <span>div1</span>
         </div> 
