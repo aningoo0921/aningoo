@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>background 실습</title>
+    <style>
+        .prac1,
+        .prac2,
+        .prac3 {
+            width: 800px;
+            height: 500px;
+            background-color: skyblue;
+            margin-bottom: 10px;
+            background-image: url(https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a);
+        }
+
+      .prac1 {
+        background-position:center;
+        background-repeat: repeat-x;
+    }
+      .prac2 {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 100px 30px;
+    }
+      .prac3 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: -100px;
+    }
+    </style>
+  </head>
+  <body>
+    <h3>background 실습</h3>
+    <div class="prac1"></div>
+    <div class="prac2"></div>
+    <div class="prac3"></div>
+    
+  </body>
+</html>
