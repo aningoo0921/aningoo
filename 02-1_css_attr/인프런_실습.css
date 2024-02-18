@@ -1,21 +1,60 @@
-* {
-    /* 태그에 기본적으로 적용되어 있는 margin,padding 없애기 */
-    /* border-box 안주면 검색창 이상해짐 */
-    box-sizing: border-box;
-  }
-  
-  header {
-    box-shadow: 1px 0 10px rgba(135, 135, 135, 0.461);
-  }
-  
-  header .inner .menu-right .header__search i {
-    /* 돋보기 input 안으로 이동시키기*/
-    /* 축으로 이동시킴 */
-    transform: translateY(-50%);
-  }
-  
-  /* btn */
-  
-  .btn {
-    cursor: pointer;
-  }
+/* * {
+  box-sizing: border-box;
+}
+header {
+  box-shadow: 1px 0 10px rgba(135, 135, 135, 0.461);
+}
+
+header .inner .menu-right .header__search i {
+  transform: translateY(-50%);
+} */
+
+.inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* a {
+  text-decoration: none;
+} */
+
+/* .menu-left i {
+  color: green;
+} */
+.menu {
+  display: flex;
+  list-style: none;
+
+}
+.menu-left {
+  display: flex;
+}
+.menu-right {
+  display: flex;
+}
+.header__search {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  width: 100%;
+  padding-right: 40px;
+}
+
+
+/* btn */
+
+.btn {
+  cursor: pointer;
+}
+.left-item {
+  padding: 10px;
+}
+input:focus {
+  outline-color: green;
+}
