@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>search</title>
+    <style>
+        input {
+            height: 50px;
+            background-color: #f5f5f5;
+            border: none;
+            border-radius: 50px;
+            background-image: url(img/search-icon.png);
+            background-size: 30px;
+            background-repeat: no-repeat;
+            background-position: 15px 10px;
+            padding: 0 15px 0 55px;
+            font-size: 20px;
+        }
+
+        input:focus {
+            outline: none; /* focus시 자동으로 테두리 */
+        }
+        input:hover:not(input:focus){
+            background-color: #b0b0b0;
+        }
+    </style>
+  </head>
+  <body>
+    <input type="검색" placeholder="검색" />
+  </body>
+</html>
