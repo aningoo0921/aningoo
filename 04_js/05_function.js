@@ -20,7 +20,8 @@
         -function 키워드 사용하지 않고, 화살표로 작성
         -ex.const funcName = function
  */
-helloWorld1(); // 함수
+
+        helloWorld(); // 함수
 //함수 정의
 // 1.명시적 함수 선언 -> 함수 선언문
 function helloWorld() {
@@ -57,7 +58,7 @@ function numPlusOne(num) {
     return num + 1;
 }
 console.log(numPlusOne(5)); //num -> 5 ->5 + 1 ->6을 반환 -> console.log(6)
- function sum(sum1, num2) {
+ function sum(num1, num2) {
     return num1 + num2;
  }
  console.log(sum(5, 7)); //12
@@ -74,3 +75,23 @@ console.log(numPlusOne(5)); //num -> 5 ->5 + 1 ->6을 반환 -> console.log(6)
  hello('layla')
  const username = 'layla';
  hello(username);
+
+//실습: 함수 만들기-1
+function multifly(num1, num2) {
+  return num1 * num2;
+}
+
+console.log(multifly(3, 7));
+console.log(multifly(2, 2));
+
+//실습: 함수 만들기-2
+const square = function (num3) {
+  console.log(num3 ** 2);
+};
+square(4);
+square(11);
+
+
+
+
+ 
