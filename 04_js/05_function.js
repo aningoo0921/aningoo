@@ -86,9 +86,9 @@ console.log(multifly(2, 2));
 
 //실습: 함수 만들기-2
 const square = function (num3) {
-  console.log(num3 ** 2);
+  console.log(num3 ** 2); // return num ** 2;
 };
-square(4);
+square(4); //console.log(square(4));
 square(11);
 
 
