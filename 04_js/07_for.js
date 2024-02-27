@@ -84,31 +84,39 @@ for (let i = 2; i <= 10; i++) {
     }
 }
 
-//구구단 실습:
-// for(let i = 2; i < 10; i++) {
+//2단 구구단 실습: 내가 한 거임
+// for(let i = 2; i <= 9; i++) {
 //     console.log(i + '단');
 //     for(let j = 1; j <= 9; j++) {
 //     console.log(i + ' * ' + j + ' = ' + (i*j));
 //     }
 //   }
-// const number = 2;
+// const number = 2; //리더님 한 거임
 // console.log(number + '단')
 // for (let i = 1; i < 10; i++)
 // console.log('${number}* ${i} = ${number *1}');
 
-for(let i = 2; i < 10; i++) {
-  console.log(i + '단');
-  for(let j = 1; j < 10; j++) {
-  console.log('${i} * ${j} = ${i*j}');
+// 2~9까지 구구단:내가 한 거임
+// for(let i = 2; i < 10; i++) {
+//     console.log(`${i}단`);
+//     for(let j = 1; j < 10; j++) {
+//     console.log(`${i} * ${j} = ${i*j}`);
+//     }
+//   }
+// 구구단 다른 방법
+for(let i = 2; i <= 9; i++) {
+    console.log(i + '단');
+    for(let j = 1; j <= 9; j++) {
+    console.log(i + ' * ' + j + ' = ' + (i*j));
+    }
   }
-}
-// (i + ' * ' + j + ' = ' + (i*j))
 //이중 for문
 for (let i = 0; i < 5; i++){
-    console.log('i : ', i);
+    console.log(`i : `, i);
 
     for (let j = 0; j < 10; j++) {
-        console.log('현재 i는 ${i}이고, j는 ${j}입니다.')
+        console.log(`현재 i는 ${i}이고, j는 ${j}입니다.`)
     }
 }
 
+  
