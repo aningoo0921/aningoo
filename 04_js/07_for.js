@@ -97,19 +97,21 @@ for (let i = 2; i <= 10; i++) {
 // console.log('${number}* ${i} = ${number *1}');
 
 // 2~9까지 구구단:내가 한 거임
-// for(let i = 2; i < 10; i++) {
-//     console.log(`${i}단`);
-//     for(let j = 1; j < 10; j++) {
-//     console.log(`${i} * ${j} = ${i*j}`);
-//     }
-//   }
-// 구구단 다른 방법
 for(let i = 2; i <= 9; i++) {
     console.log(i + '단');
     for(let j = 1; j <= 9; j++) {
     console.log(i + ' * ' + j + ' = ' + (i*j));
     }
   }
+
+// 구구단 다른 방법
+// for(let i = 2; i < 10; i++) {
+//     console.log(`${i}단`);
+//     for(let j = 1; j < 10; j++) {
+//     console.log(`${i} * ${j} = ${i*j}`);
+//     }
+//   }
+
 //이중 for문
 for (let i = 0; i < 5; i++){
     console.log(`i : `, i);
@@ -119,4 +121,118 @@ for (let i = 0; i < 5; i++){
     }
 }
 
-  
+// ----------------------------------------------------
+// while 문 
+/*
+    while(조건) {
+        조건에 만족하는 동안 실행될 코드
+    }
+*/
+// 조건을 제어하는 구문이 없기 때문에 무한 루프에 빠지지 않도록 주의해서 사용
+let num = 1;
+while  (num <= 5) {
+    console.log(num) ;
+    num++; // -> num = num + 1
+}
+
+num = 9;
+while (num >= 4) {
+    console.log(num);
+    num--; // 1씩 감소시킴
+}
+
+console.log('----------------------');
+// while 뮨 사용해 1부터 10까지 짝수 출력
+num = 1;
+while (num <= 10 ) {
+    if (num % 2 === 0) {
+        console.log(num) ;
+    } 
+    num++;
+}
+
+// while 뮨 사용해 10부터 1까지 홀수 출력
+num = 10;
+while (num >= 1 ) {
+    if (num % 2 === 1) { // if (num % 2 !== 0)
+        console.log(num) ;
+    } 
+    num--;
+}
+
+console.log('----------------------');
+// 무한루프 -> 조건식이 참이면 무한히 while문을 빠져나올 수 없음
+let num2 = 0;
+while (true) {
+    console.log(num2);
+    num2++;
+    
+    // break; // break 없다면 무한루프 또는 빠져나가야 할 조건을 설정
+    if (num2 > 10) {
+        break;
+    }
+}
+
+// num2 = 0;
+// while (confirm('계속 할까요?')) {
+//     num2++
+//     alert(`${num2}번째 alert 창`);
+// }
+
+
+console.log('----------------------');
+//실습_1
+// for문
+let num3 = 0;
+let sum = 0;
+for (num3 = 0; num3 <= 100; num3++) {
+    if (num3 % 2 == 0 || num3 % 5 == 0) {
+        sum += num3;
+    }
+}
+console.log(sum);
+
+// let pracSum = 0;
+// for (let i = 0; i <= 100; i++) {
+//     if (i % 2 == 0 || i % 5 == 0) {
+//         pracSum += i;
+//     }
+// }
+
+// while문
+num3 = 0;
+sum = 0;
+while (num3 <= 100) {
+    if(num3 % 2 == 0 || num3 % 5 == 0) {
+        sum += num3;
+    }
+    num3++;
+}
+console.log(sum);
+
+// let pracNum = 0;
+// let pracSum2 = 0;
+
+// while (pracNum <= 100) {
+//     if (pracNum % 2 === 0 || pracNum % 5 === 0) {
+//         pracSum2 += i;
+//         pracNum++;
+//     }
+// }
+
+//실습_2
+let input = Number(prompt('숫자를 입력해주세요.'));
+for(let i = 0; i <= input; i++) {
+    if (i % 13 === 0 && i % 2 === 1) {
+        console.log(i);
+    }
+}
+
+//실습 3. 이중 for문을 사용해 구구단 출력
+for (let i = 2; i <= 9; i++) {
+    console.log(`---${i} 단---`)
+    for (let j = 1; j <= 9; j++) {
+        console.log(`${i} * ${j} = ${i * j}`);
+    }
+}
+
