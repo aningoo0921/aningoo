@@ -236,3 +236,11 @@ for (let i = 2; i <= 9; i++) {
     }
 }
 
+// 실습-배열에서의 반복
+console.log('1~100까지 배열')
+let nums = []
+for (let i = 1; i <= 100; i++) {
+    nums.push(i);
+}
+console.log(nums)
+
