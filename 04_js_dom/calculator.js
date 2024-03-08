@@ -1,4 +1,3 @@
-//js코드
 const result = document.querySelector("#result");
 const resultBtn = document.querySelector("#resultBtn");
 const eraseBtn = document.querySelector("#erase");
