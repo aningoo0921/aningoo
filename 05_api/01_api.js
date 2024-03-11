@@ -232,6 +232,7 @@ fetch('https://api.thecatapi.com/v1/images/search')
   });
 
   // ----------------------------------------------------------
+ 
   // OMDb api 사용해 영화 데이터 받아와 브라우저에 보여주기
 
   async function getMovieData() {
@@ -242,12 +243,14 @@ fetch('https://api.thecatapi.com/v1/images/search')
     // fetch로 데이터 불러오기
     // response 변수에는 서버에서 방다온 데이터가 저장됨
     const response = await fetch(
-        `http://www.omdbapi.com/?i=tt3896198&apikey=e0219594&s=${word}`
+      `http://www.omdbapi.com/?i=tt3896198&apikey=88cd9ae0&s=${word}`
     );
     const movieData = await response.json();
 
     console.log(movieData.Search);
-    const ul = document.querySelector('ul')
+
+    const ul = document.querySelector('ul');
+  ul.innerText = '';
    
 
     // 불러온 데이터는 movieData.Search 배열 안에 각각에 객체로 있음
@@ -255,13 +258,13 @@ fetch('https://api.thecatapi.com/v1/images/search')
     for (let movie of movieData.Search) {
         const div = document.createElement('div'); // 영화 카드 컨테이너
         const img = document.createElement('img'); // 영화 포스터
-        const p = document.createElement('p'); // 영화 재목
+        const p = document.createElement('p'); // 영화 제목
 
         img.src = movie.Poster;
         img.alt = movie.Title;
         p.innerText = movie.Title;
         div.append(img, p);
-        ul.append(div)
+        ul.append(div);
     }
   } 
 
@@ -279,18 +282,20 @@ fetch('https://api.thecatapi.com/v1/images/search')
     });
   };
 
-  const postPost = () => {
-    fetch('https://jsonplaceholder.typicode.com/posts/1' {
+  // post 요청
+// 새로운 게시물 생성하는 함수
+const postPost = () => {
+  fetch('https://jsonplaceholder.typicode.com/posts', {
     method: 'POST',
     body: JSON.stringify({
-        title: '제목제목제목',
-        body: '게시물 내용 내용 내용'
-        userId: 1,
+      title: '제목제목제목',
+      body: '게시물 내용 내용 내용',
+      userId: 1,
     }),
     headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-    }
-    })
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
     .then((response) => response.json())
     .then((data) =>
     // 브라우저에 렌더링 등 응답으로 받은 데이터를 사용)
