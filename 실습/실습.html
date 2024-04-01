@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Current Location Search</title>
+<style>
+  .search {
+    text-align: center;
+  }
+
+  .search input[type="text"] {
+    width: 200px; /* 입력 상자의 너비를 조정할 수 있습니다. */
+    padding: 10px; /* 입력 상자의 패딩을 조정할 수 있습니다. */
+  }
+
+  .search img {
+    width: 20px; /* 아이콘의 너비를 조정할 수 있습니다. */
+    height: 20px; /* 아이콘의 높이를 조정할 수 있습니다. */
+    cursor: pointer; /* 아이콘에 커서를 포인터로 설정하여 클릭 가능하게 만듭니다. */
+  }
+
+  .current-location-button {
+    margin-left: 10px; /* 버튼과 입력 상자 사이의 여백을 조정할 수 있습니다. */
+  }
+</style>
+</head>
+<body>
+<div class="search">
+    <input type="text" placeholder="주소를 입력해주세요.">
+    <img src="../assets/icon/searchBlack.svg" alt="Search Icon">
+    <button class="current-location-button" onclick="getCurrentLocation()">
+      <img src="../assets/icon/locationBlack.svg" alt="Current Location Icon">
+      현재위치
+    </button>
+</div>
+
+<script>
+  function getCurrentLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        // 현재 위치 정보를 사용하여 추가적인 작업을 수행할 수 있습니다.
+        console.log('Current latitude:', position.coords.latitude);
+        console.log('Current longitude:', position.coords.longitude);
+      }, function() {
+        console.log('Geolocation service failed.');
+      });
+    } else {
+      console.log('Geolocation is not supported by this browser.');
+    }
+  }
+</script>
+</body>
+</html>
