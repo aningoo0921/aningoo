@@ -55,3 +55,36 @@ house1.consoleInfo();
  apt1.consoleWindow();
  apt1.consolePassword();
  apt1.consoleInfo();
+
+
+// ----------------------------------------------------------------------
+// 실습:1 Shape 클래스 만들기
+
+class Shape {
+    constructor(height, width) {
+        this.height = height
+        this.width = width;
+    }
+
+    getArea() {
+        return this.height * this.width;
+    }
+}
+// rec1의 인스턴스
+let rec1 = new Shape(3, 4);
+console.log(rec1.getArea());
+
+// 선택 실습 (원)
+class Circle extends Shape {
+    constructor(height, width, radius) {
+        super(height, width)
+        this.radius = radius;
+    }
+
+    getArea(){
+        return this.width/2 ** 2 * this.radius;
+    }
+}
+
+const cir = new Circle(5, 5, 3.14);
+console.log(cir.getArea());
