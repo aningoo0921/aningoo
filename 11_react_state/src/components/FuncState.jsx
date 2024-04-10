@@ -75,7 +75,10 @@ export default function FuncState() {
 }
 */
 
-// 버튼 클릭 시 apple -> 사과 -> apple -> 사과
+// --------------------------------------------------
+
+// useState 사용해 버튼 클릭 시 apple -> 사과 -> apple -> 사과
+
 import { useState } from 'react';
 
 export default function FuncState() {
@@ -96,4 +99,3 @@ export default function FuncState() {
     </div>
   );
 }
-

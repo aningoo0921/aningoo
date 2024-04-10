@@ -1,10 +1,14 @@
+// export default function CharactorInfo(props) {
+// const charactorData = props.charactorData
+// const {charactorData} = props
+export default function CharactorInfo({ charactorData }) {
+  console.log(charactorData);
 
-export default function CharactorInfo({ charactorInfo }) {
   return (
     <>
-      <div>Name: {charactorInfo.name}</div>
-      <div>Age: {charactorInfo.age}</div>
-      <div>NickName: {charactorInfo.nickName}</div>
+      <div>Name: {charactorData.name}</div>
+      <div>Age: {charactorData.age}</div>
+      <div>NickName: {charactorData.nickName}</div>
     </>
   );
 }

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import CharactorInfo from './CharactorInfo';
 
 export default function CharactorsContainer() {
+  // 사용자의 데이터가 담긴 객체의 배열
   const [characters, setCharacters] = useState([
     {
       id: 1,
@@ -24,6 +25,9 @@ export default function CharactorsContainer() {
   ]);
 
   // selectedCharacter state 선언
+  // 선택된 캐릭터의 정보를 객체 형태로 저장할 예정
+  // 조건 중에서 선택된 캐릭터가 없을 때 CharactorInfo 컴포넌트를 렌더링 하지 말라는 조건이 있으므로
+  // 초기값을 null로 주어 해당 state로 조건부 렌더링까지 할 수 있도록 작성
   const [selectedCharacteor, setSelectedCharactor] = useState(null);
 
   // handleClick 함수 (인자: 선택된 버튼의 name 값)
@@ -46,7 +50,7 @@ export default function CharactorsContainer() {
       {/* 선택된 캐릭터 정보를 props로 전달하기 */}
       {/* selectedCharacteor state의 값이 없는 경우 CharactorInfo 컴포넌트 렌더링 X */}
       {selectedCharacteor && (
-        <CharactorInfo charactorInfo={selectedCharacteor} />
+        <CharactorInfo charactorData={selectedCharacteor} />
       )}
     </div>
   );
