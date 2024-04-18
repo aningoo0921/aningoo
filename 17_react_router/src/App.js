@@ -34,10 +34,20 @@ function App() {
      */}
 
       <Header />
-      <ProductPage />
-      <ProductDetailPage />
-      <PhotoPage />
-      <NotFound />
+
+      {/* 라우팅 하기 */}
+      {/* Home 컴포넌트 경로 : / */}
+      {/* ProductPage 컴포넌트 경로: /products */}
+      {/* ProductDetailPage 컴포넌트 경로: /products/1 */}
+      {/* PhotoPage 컴포넌트 경로: /photos */}
+      {/* 이외 모든 페이지 NotFound 컴포넌트 */}
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/products' element={<ProductPage />} />
+        <Route path='/products/1' element={<ProductDetailPage />} />
+        <Route path='/photos' element={<PhotoPage />} />
+        <Route path='*' element={<NotFound />} />
+      </Routes>
     </div>
   );
 }
